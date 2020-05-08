@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, ScrollView, StyleSheet, TextInput} from 'react-native';
+import {View, ScrollView, StyleSheet, TextInput, Text} from 'react-native';
 
 import Chat_Message from './Chat-Components/Message';
 
