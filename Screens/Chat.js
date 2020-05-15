@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, ScrollView, StyleSheet, TextInput, Text, FlatList, Button} from 'react-native';
+import {View, StyleSheet, TextInput, Text, FlatList, Button} from 'react-native';
 import firebase from 'firebase';
 import {Ionicons} from '@expo/vector-icons'
 
@@ -11,10 +11,6 @@ const styles = StyleSheet.create({
     {
         flex:1,
         backgroundColor:"black"
-    },
-    texe:
-    {
-        color:"white"
     },
     myMessage:
     {
@@ -40,7 +36,8 @@ const styles = StyleSheet.create({
 
 const Chat = ({navigation, route}) =>
 {
-    const room = useState({
+    const room = useState(
+    {
         id:route.params.id.toUpperCase(),
         title:route.params.title,
         messages:[]
