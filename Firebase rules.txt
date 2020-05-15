@@ -1,0 +1,59 @@
+
+  "rules": 
+  {
+    "Users":
+    {
+      "$user_id":
+      {
+        ".write":"auth.uid === $user_id",
+        "Public":
+        {
+          ".read":true,
+          "nickname":
+          {
+            ".validate":"newData.isString()"
+          },
+          "image":
+          {
+            ".validate":"newData.isString()"
+          }
+        },
+        "Private":
+        {
+          ".read":"auth.uid === $user_id",
+          "email":
+          {
+            ".validate":"newData.isString()"
+          }
+        }
+      }
+    },
+    "ChatRooms":
+    {
+      "$roomID":
+      {
+        ".read":"data.child('guests').hasChild(auth.uid) || data.child('owner').val() === auth.uid",
+          "guests":
+        {
+          ".write":"data.child('owner').val() === auth.uid",
+          "$naujas":
+          {
+            ".validate":"newData.isBoolean()"
+          }
+        },
+        "owner":
+        {
+          ".write":"data.child('owner').val() === auth.uid",
+          ".validate":"newData.isString()",
+        },
+        "messages":
+        {
+          "$message_id":
+          {
+            ".write":"data.parent().parent().child('guests').hasChild(auth.uid) || auth.uid === data.parent().parent().child('owner').val()"
+          }
+        }
+      }
+    }
+  }
+}
