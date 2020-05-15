@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {View, ScrollView, StyleSheet, TextInput, Text,Image} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import Chat from '../Chat';
+
 
 const styles = StyleSheet.create({
     main:
@@ -39,8 +41,12 @@ const styles = StyleSheet.create({
 });
 
 
-const Room = ({title, navigation, onClickEvent}) =>
+const Room = ({title, navigation, room_id}) =>
 {
+    const onClickEvent = () => 
+    {
+        navigation.navigate("Chat",{id:room_id,title:title});
+    };
     return(
         <TouchableOpacity onPress={onClickEvent}>
             <View style={styles.main}>

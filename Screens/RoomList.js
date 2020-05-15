@@ -66,20 +66,20 @@ const RoomList = ({navigation}) =>
 
     const UpdateList = () => 
     {
+        const refreshedRooms = [];
         let RoomsFirebase = firebase.database().ref(`/Users/${firebase.auth().currentUser.uid}/Private/rooms`);
         RoomsFirebase.once("value",(snapshot) => 
         {
-            rooms[1]({list:[],refresh:true});
             snapshot.forEach((childSnapshot) => 
             {
                  firebase.database().ref(`/ChatRooms/${childSnapshot.key.toUpperCase()}`).once("value")
                 .then((roomSnapshot) => 
                 {
-                    rooms[0].list.push({name:roomSnapshot.val().name,key:childSnapshot.key});
+                    refreshedRooms.push({name:roomSnapshot.val().name,key:childSnapshot.key});
                 })
                 .then(() => 
                 {
-                    rooms[1]({...rooms[0],refresh:false});
+                    rooms[1]({list:refreshedRooms,refresh:false});
                 });
             })
         },
@@ -97,10 +97,10 @@ const RoomList = ({navigation}) =>
                 : 
                 <FlatList
                 data={rooms[0].list}
-                keyExtractor={(room) => { return room.id;}}
+                keyExtractor={(room) => { return room.key;}}
                 renderItem={({item}) => 
                 {
-                    return <Room title={item.name} key={item.key}/>
+                    return <Room title={item.name} room_id={item.key} navigation={navigation}/>
                 }}
                  />}
         </View>

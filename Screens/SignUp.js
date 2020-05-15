@@ -48,7 +48,7 @@ const SignUp = ({navigation}) =>
     {
         firebase.initializeApp(FirebaseConf);
     }
-    states = 
+    const states = 
     {
         name: useState(''),
         email: useState(''),
