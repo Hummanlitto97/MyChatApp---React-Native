@@ -1,0 +1,118 @@
+{
+  "ChatRooms" : {
+    "ROOM1" : {
+      "guests" : {
+        "NBPO4vPSUUXowXqJ3bh7M7I8Xou1" : true
+      },
+      "image" : "",
+      "messages" : {
+        "1" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "Hello"
+        },
+        "2" : {
+          "owner" : 14,
+          "text" : "Amm..Tester"
+        },
+        "3" : {
+          "owner" : 18,
+          "text" : "ohh"
+        },
+        "1589538436380" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "Yesss.. "
+        },
+        "1589538445297" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "Make me try"
+        },
+        "1589538447801" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "u"
+        },
+        "1589538449763" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "i"
+        },
+        "1589538450554" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "b"
+        },
+        "1589538451262" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "b"
+        },
+        "1589538452056" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "b"
+        },
+        "1589538452748" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "b"
+        },
+        "1589538458727" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "bkejsjsjej"
+        },
+        "1589538461180" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "njfjrjdjjej"
+        },
+        "1589538463109" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "jdjdjdjekke"
+        },
+        "1589538464968" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "jdjejekeken"
+        },
+        "1589538466316" : {
+          "owner" : "NBPO4vPSUUXowXqJ3bh7M7I8Xou1",
+          "text" : "duejej"
+        }
+      },
+      "name" : "DraugystesVieta",
+      "owner" : "AB0EEKFiSoN7jiFnkan35xbXgrk2"
+    }
+  },
+  "Users" : {
+    "AB0EEKFiSoN7jiFnkan35xbXgrk2" : {
+      "Private" : {
+        "email" : "kitas@kitas.com",
+        "friends" : {
+          "NBPO4vPSUUXowXqJ3bh7M7I8Xou1" : true
+        },
+        "rooms" : {
+          "ROOM1" : true
+        }
+      },
+      "Public" : {
+        "image" : " ",
+        "nickname" : "Antis"
+      }
+    },
+    "NBPO4vPSUUXowXqJ3bh7M7I8Xou1" : {
+      "Private" : {
+        "email" : "Test@test.com",
+        "friends" : {
+          "AB0EEKFiSoN7jiFnkan35xbXgrk2" : true
+        },
+        "rooms" : {
+          "room1" : true
+        }
+      },
+      "Public" : {
+        "image" : " ",
+        "nickname" : "Test"
+      }
+    },
+    "Uhz30CowT1bM1PiBk74tHFNPqUK2" : {
+      "Private" : {
+        "email" : "tas@gug.com"
+      },
+      "Public" : {
+        "nickname" : "Petras"
+      }
+    }
+  }
+}
