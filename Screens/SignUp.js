@@ -70,15 +70,7 @@ const SignUp = ({navigation}) =>
         {
             firebase.database().ref(`/Users/${firebase.auth().currentUser.uid}`).set(
                 {
-                    nickname:"lol"
-                    /*Public:
-                    {
-                        nickname:"Petras"
-                    },
-                    Private:
-                    {
-                        email:states.email[0]
-                    }*/
+                    nickname: states.nickname[0]
                 });
             navigation.navigate("Login");
         })
@@ -93,7 +85,6 @@ return(
             <TextInput value={states.password[0]} onChangeText={onChangePassword}/>
             <Text style={styles.label}>Nickname:</Text>
             <TextInput value={states.nickname[0]} onChangeText={onChangeNick}/>
-            <Text>Upload your image:</Text>
             <Button title="Sign Up" onPress={onPressSignup}/>
         </View>
     </View>
